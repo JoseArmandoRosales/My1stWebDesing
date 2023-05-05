@@ -1,0 +1,290 @@
+/* Para declarar variables de CSS usar :root*/
+:root {
+    --blanco: #ffffff;
+    --rosa: #fc76ee;
+}
+
+html {
+    font-size: 65%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: linear-gradient(to top, rgb(47, 50, 141) 20%, #7173b1 150%);
+    /* rgb(47, 50, 141);*/
+    font-size: 16px;
+    /* 1 rem = 10px */
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1px;
+    text-align: justify;
+
+
+}
+
+.contenedor {
+    /* Primer valor es el margun top, segundo margin right, margin bottom, margin left */
+    max-width: 75rem;
+    margin: 0 auto 0 auto;
+}
+
+.contenedorClientes{
+    /* Primer valor es el margun top, segundo margin right, margin bottom, margin left */
+    max-width: 75rem;
+    margin: 0 auto 0 auto;
+    margin-bottom: 2rem;
+}
+
+.margintop{
+    margin-bottom: 2rem;
+}
+
+.contenedorMain {
+    max-width: 120rem;
+    background-color: white;
+    color: black;
+    /* Primer valor es el margun top, segundo margin right, margin bottom, margin left */
+    margin: 0 auto 0 auto;
+    padding: 1rem 4rem;
+}
+
+.contenedorContacto {
+    max-width: 120rem;
+    background-color: white;
+    color: black;
+    /* Primer valor es el margun top, segundo margin right, margin bottom, margin left */
+    margin: 0 auto 0 auto;
+    margin-top: 3rem;
+    padding: 1rem 4rem;
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 0px 12px 7px rgba(255,189,255,1);
+    -moz-box-shadow: 0px 0px 12px 7px rgba(255,189,255,1);
+    box-shadow: 0px 0px 12px 7px rgba(255,189,255,1);
+    border-radius: 10px;
+}
+
+.titulo {
+    text-align: center;
+    text-shadow: 0 0 8px black;
+    color: var(--rosa);
+    font-size: 3rem;
+    background-color: #575aa3;
+}
+
+.titulo span {
+    color: white;
+    text-shadow: 0 0 8px var(--rosa);
+    font-size: 1.5rem;
+}
+
+.navBackground {
+    background-color: rgb(218, 146, 38);
+}
+
+.principalNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 500px) {
+    .contenedor {
+        flex-direction: row;
+    }
+}
+
+
+.principalNav a:hover {
+    background-color: rgb(185, 125, 35);
+    color: black;
+}
+
+.hero {
+    color: white;
+    text-align: center;
+    background-image: url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contenido-hero a:hover {
+    background-color: rgb(185, 125, 35);
+    color: black;
+}
+
+.boton {
+    font-size: 2rem;
+    padding: .5rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(218, 146, 38);
+    border-radius: .5rem;
+    text-align: center;
+    width: 90%;
+    border: none;
+}
+.boton:hover{
+    cursor: pointer;
+}
+.botonEnviar {
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #266eda;
+    border-radius: .5rem;
+    text-align: center;
+    width: 100%;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .botonEnviar{
+        width: 30%;
+    }    
+}
+
+.botonEnviarFlex{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botonEnviar:hover{
+    cursor: pointer;
+    background-color: #477de0;
+    color: white;
+}
+@media (min-width: 500px) {
+    .boton {
+        width: auto;
+    }
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.contacto {
+    background-color: rgb(218, 146, 38);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: min(100rem, 100%);
+    margin: 0 auto;
+    padding: 2rem 2rem .5rem 2rem;
+}
+
+.contacto fieldset{
+    border: none;
+}
+
+.contacto legend{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+@media (min-width: 786px) {
+    .contenedorCampos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 12rem;
+        column-gap: 1.5rem;
+        row-gap: 1rem;
+    }  
+}
+
+.campo:nth-child(3){
+    grid-column: 1 / 3;
+}
+.campo:nth-child(4){
+    grid-column: 1 / 3;
+}
+
+.campo label{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo textarea{
+    height: 10rem;
+}
+
+
+
+.inputText{
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1rem;
+    border: none;
+}
+
+
+@media (min-width: 780px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        column-gap: 1rem;
+        /* Se puede usar 1fr 1fr 1fr, donde fr = fracción */
+        /* Tambien puede ser 1fr 1fr 2fr, donde el segundo ocuoa un 50% del grid */
+    }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3{
+    text-align: center;
+}
+
+.servicio p{
+    line-height: 1.5;
+}
+
+.servicio .iconos{
+    height: 10rem;
+    width: 10rem;
+    background-color: rgb(218, 146, 38);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    text-align: center;
+}
